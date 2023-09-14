@@ -1,0 +1,51 @@
+.promo {
+  background-color: var(--gum-pink);
+  background-image: url(../../../images/heropic.svg);
+  background-repeat: no-repeat;
+  background-position: center 82px;
+  min-height: 524px;
+}
+
+.promo__container {
+display: flex;
+justify-content: center;
+position: relative;
+}
+
+.promo__title {
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: -2px;
+  margin: 0;
+  max-width: 730px;
+  position: absolute;
+  padding-top: 184px;
+}
+
+@media screen and (max-width: 1040px) {
+  .promo {
+    min-height: 784px;
+    background-position: center 224px;
+  }
+.promo__title {
+  padding-top: 326px;
+}
+}
+
+@media screen and (max-width: 700px) {
+  .promo {
+    background-size: 248px 248px;
+    min-height: 570px;
+    background-position: center 142px;
+  }
+  .promo__title {
+    font-size: 31px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 39px;
+    letter-spacing: -1.24px;
+    padding-top: 207px;
+  }
+}
+

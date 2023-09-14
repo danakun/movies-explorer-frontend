@@ -1,0 +1,90 @@
+@import url(./utils/vendor/normalize.css);
+@import url(./utils/vendor/fonts.css);
+
+:root {
+  --charcoal-black: #000;
+  --pristine-white: #FFF;
+  --slate-gray: #a0a0a0;
+  --silver-gray: #F9F9F9;
+  --dove-gray: #E8E8E8;
+  --electric-pink: #FF4062;
+  --gum-pink: #F3C1F8;
+  --pearl-white: #FDFDFD;
+  --vibrant-green: #2BE080;
+  --stone-gray: #CBCBCB;
+  --ash-gray: #E6E6E6;
+  --midnight-gray: #4A4A4A;
+  --light-silver: #F2F2F2;
+  --mist-gray: #F5F5F5;
+  --steel-gray: #959595;
+  --check-gray: #EBEBEB;
+  --disabled-gray: #C2C2C2;
+}
+
+
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.limits-container {
+  max-width: 1140px;
+  width: calc(100% - 70*2px);
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 400;
+  text-align: left;
+  border-bottom: 1px solid var(--charcoal-black);
+  padding-bottom: 22px;
+  margin: 0;
+}
+
+.section-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0;
+}
+
+
+@media screen and (max-width: 1040px) {
+  .limits-container {
+    width: calc(100% - 30px*2);
+}
+
+  .section-title {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.72px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .limits-container {
+    width: calc(100% - 10px*2)
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .section-title {
+    padding-bottom: 23px;
+    font-size: 18px;
+    letter-spacing: -0.72px;
+  }
+
+  .section-text {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+}
+

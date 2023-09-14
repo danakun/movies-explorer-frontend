@@ -1,0 +1,22 @@
+.header_theme_pink {
+  background-color: var(--gum-pink);
+  padding: 18px 0;
+}
+
+.header_theme_white {
+  padding: 18px 0;
+  background-color: var(--pristine-white);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+height: 38px;
+}
+
+
+
