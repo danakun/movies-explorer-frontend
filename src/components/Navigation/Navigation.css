@@ -103,13 +103,11 @@ transition: opacity .3s linear;
   display: none;
 }
 
-
 @media screen and (max-width: 890px) {
   .navigation__movies-link_active {
     border-bottom: 1px solid var(--charcoal-black);
   }
 }
-
 
 @media screen and (max-width: 700px) {
   .navigation__signup-link {
@@ -125,14 +123,12 @@ transition: opacity .3s linear;
     line-height: 16px;
     padding: 7px 12px;
   }
+  .navigation__movies,
+  .navigation__profile {
+    display: none;
+  }
+  .navigation__burger {
+    display: block;
+  }
   }
 
-  @media screen and (max-width: 700px) {
-    .navigation__movies,
-    .navigation__profile {
-      display: none;
-    }
-    .navigation__burger {
-      display: block;
-    }
-  }

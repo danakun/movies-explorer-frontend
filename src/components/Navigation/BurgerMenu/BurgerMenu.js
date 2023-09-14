@@ -61,6 +61,6 @@ const BurgerMenu = ({ onClose, isAuthorized }) => {
 export default BurgerMenu;
 
 BurgerMenu.propTypes = {
-  onClose: PropTypes.func.isRequired, // onClose should be a function and is required
-  isAuthorized: PropTypes.bool.isRequired, // isAuthorized should be a boolean and is required
+  onClose: PropTypes.func.isRequired,
+  isAuthorized: PropTypes.bool.isRequired,
 };
