@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'; // Import PropTypes
-import iconError from '../images/icon-error.png';
-import iconSuccess from '../images/icon-success.png';
+import iconError from '../../images/iconError.svg';
+import iconSuccess from '../../images/iconSuccess.svg';
 import './InfoTooltip.css';
 
 function InfoTooltip({ isOpen, onClose, isSuccessful, onOverlayClick }) {

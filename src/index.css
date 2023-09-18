@@ -21,8 +21,6 @@
   --disabled-gray: #C2C2C2;
 }
 
-
-
 body {
   margin: 0;
   min-height: 100vh;
@@ -30,7 +28,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 
 .limits-container {
   max-width: 1140px;
@@ -43,7 +40,7 @@ body {
   font-weight: 400;
   text-align: left;
   border-bottom: 1px solid var(--charcoal-black);
-  padding-bottom: 22px;
+  padding-bottom: 23px;
   margin: 0;
 }
 
@@ -74,9 +71,9 @@ body {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 700px) {
   .section-title {
-    padding-bottom: 23px;
+    padding-bottom: 28px;
     font-size: 18px;
     letter-spacing: -0.72px;
   }
@@ -85,6 +82,5 @@ body {
     font-size: 11px;
     line-height: 16px;
   }
-
 }
 

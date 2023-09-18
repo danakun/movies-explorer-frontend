@@ -4,7 +4,7 @@ import photo from '../../../images/photo.jpg';
 
 const AboutMe = () => {
   return (
-    <div className="about-me limits-container" id='about-me'>
+    <section className="about-me limits-container" id='about-me'>
       <h2 className="about-me__title section-title">Студент</h2>
       <div className="about-me__container">
         <div className="about-me__info">
@@ -28,7 +28,7 @@ const AboutMe = () => {
         </div>
         <img className="about-me__photo" src={photo} alt="Портрет дружелюбной Даны Кун" />
       </div>
-    </div>
+    </section>
   );
 };
 

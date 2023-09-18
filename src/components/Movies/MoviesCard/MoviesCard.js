@@ -16,12 +16,12 @@ const MoviesCard = ({ isSavedMoviesPage, movie }) => {
         <span className="card__duration">{movie.duration}</span>
       </div>
       {movie.saved && !isSavedMoviesPage && (
-        <button className="card__button_saved" />
+        <button type="button" className="card__button_saved" />
       )}
       {isSavedMoviesPage ? (
-        <button className="card__button_delete" />
+        <button type="button" className="card__button_delete" />
       ) : (
-        <button className="card__button">Сохранить</button>
+        <button type="button" className="card__button">Сохранить</button>
       )}
     </div>
   );

@@ -8,7 +8,7 @@ const BurgerMenu = ({ onClose, isAuthorized }) => {
   const location = useLocation();
   return (
     <div className={isAuthorized ? 'burger' : 'burger_hide'}>
-      <div className="burger__font">
+      <div className="burger__bg">
         <div className="burger__container">
           <button
             type="button"

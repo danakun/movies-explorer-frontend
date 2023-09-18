@@ -5,8 +5,6 @@
   height: 14px;
   outline: none;
   display: inline-block;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   border-radius: 20px;
   position: relative;
   cursor: pointer;
@@ -18,8 +16,6 @@
 .filter__checkbox:checked {
   background-color: var(--vibrant-green);
 }
-
-
 
 .filter__checkbox::after {
   position: absolute;
@@ -60,8 +56,33 @@
   padding-right: 30px;
 }
 
+
+
+
+@media screen and (max-width: 1040px) {
+  .filter {
+    margin-left: 18px;
+  }
+
+  .filter__label {
+    padding-right: 20px;
+    padding-left: 15px;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+  .filter__checkbox {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 15px;
+  }
+}
+
+
 @media screen and (max-width: 700px) {
   .filter {
-    padding: 46px 0 29px
+    padding: 45px 0;
+    margin: 0;
   }
 }

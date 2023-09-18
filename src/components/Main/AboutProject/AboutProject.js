@@ -3,18 +3,18 @@ import './AboutProject.css';
 
 const AboutProject = () => {
   return (
-    <div className="project-info limits-container" id="about-project">
+    <section className="project-info limits-container" id="about-project">
       <h2 className="project-info__title section-title">О проекте</h2>
       <div className="project-info__grid">
         <div className="project-info__element">
           <h3 className="project-info__header" >Дипломный проект включал 5 этапов</h3>
-          <p className="section-text">
+          <p className="project-info__copy section-text">
           Составление плана, работу над бэкендом, вёрстку, добавление функциональности и финальные доработки.
           </p>
         </div>
         <div className="project-info__element">
           <h3 className="project-info__header">На выполнение диплома ушло 5 недель</h3>
-          <p className="section-text">
+          <p className=" project-info__copy section-text">
           У каждого этапа был мягкий и жёсткий дедлайн, которые нужно было соблюдать, чтобы успешно защититься.
           </p>
         </div>
@@ -27,7 +27,7 @@ const AboutProject = () => {
           <div className="project-info__text">Front-end</div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

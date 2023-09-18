@@ -1,10 +1,14 @@
 .navigation__signin-link {
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px;
 color: var(--pristine-white);
 background-color: var(--charcoal-black);
-padding: 8px 20px;
-border-radius: 6px;
+border-radius: 3px;
 text-decoration: none;
-margin: 0;
+margin: 0 0 0 10px;
+padding: 8px 20px;
 transition: opacity .3s linear;
 }
 
@@ -13,6 +17,10 @@ transition: opacity .3s linear;
   }
 
 .navigation__signup-link {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
   color: var(--charcoal-black);
   padding: 8px 20px;
   text-decoration: none;
@@ -30,6 +38,10 @@ transition: opacity .3s linear;
 }
 
 .navigation__profile {
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px;
 text-decoration: none;
 font-weight: 500;
 color: var(--charcoal-black);
@@ -47,12 +59,19 @@ transition: opacity .3s linear;
 }
 
 .navigation__movies-link {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
   text-decoration: none;
   color: var(--charcoal-black);
   transition: opacity .3s linear;
 }
 
 .navigation__movies-link_active {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
   text-decoration: none;
   color: var(--charcoal-black);
   font-weight: 500;
@@ -98,6 +117,7 @@ transition: opacity .3s linear;
   background-image: url('../../images/burger.svg');
   width: 44px;
   height: 44px;
+  padding: 0;
   border: none;
   cursor: pointer;
   display: none;
@@ -106,6 +126,13 @@ transition: opacity .3s linear;
 @media screen and (max-width: 890px) {
   .navigation__movies-link_active {
     border-bottom: 1px solid var(--charcoal-black);
+  }
+  .navigation__burger {
+    display: block;
+  }
+  .navigation__movies,
+  .navigation__profile {
+    display: none;
   }
 }
 
@@ -122,13 +149,6 @@ transition: opacity .3s linear;
     font-weight: 500;
     line-height: 16px;
     padding: 7px 12px;
-  }
-  .navigation__movies,
-  .navigation__profile {
-    display: none;
-  }
-  .navigation__burger {
-    display: block;
   }
   }
 

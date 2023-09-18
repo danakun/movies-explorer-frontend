@@ -15,7 +15,7 @@ const Navigation = ({ isAuthorized }) => {
 
   return (
     <nav className="navigation">
-      {isAuthorized ? (
+      {isAuthorized ? (   // ! только для проверки
         <>
           <div className="navigation__movies">
             <Link
@@ -62,13 +62,14 @@ const Navigation = ({ isAuthorized }) => {
           </Link>
         </div>
       )}
-      {isAuthorized && (
+      {isAuthorized && ( // ! только для проверки, isAuthorized правильно
         <button
+          type="button"
           className="navigation__burger"
           onClick={toggleBurgerMenuOpen}
         />
       )}
-      {isAuthorized && isBurgerMenuOpen && (
+      {isAuthorized && isBurgerMenuOpen && (   // isAuthorized правильно
         <BurgerMenu onClose={toggleBurgerMenuOpen} isAuthorized={isAuthorized} />
       )}
     </nav>

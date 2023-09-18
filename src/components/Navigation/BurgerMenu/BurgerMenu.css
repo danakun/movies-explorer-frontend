@@ -3,13 +3,14 @@
   transition: 0.4s ease;
 }
 
-.burger__font {
+.burger__bg {
   background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 300;
 }
 
 .burger__container {
@@ -76,11 +77,12 @@
 .burger__button-profile {
   display: flex;
   align-items: center;
+  gap: 13px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
   color: var(--charcoal-black);
-  margin-bottom: 48px;
+  margin-bottom: 92px;
   cursor: pointer;
 }
 
@@ -92,11 +94,13 @@
   display: none;
 }
 
-
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 890px) {
   .burger {
     display: block;
   }
+}
+
+@media screen and (max-width: 700px) {
   .burger__menu {
     margin-top: 144px;
     gap: 24px;

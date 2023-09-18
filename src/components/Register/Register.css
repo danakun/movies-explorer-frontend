@@ -47,7 +47,7 @@
   border-radius: 8px;
   border: none;
   padding: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   outline-color: var(--charcoal-black);
 }
 
@@ -56,7 +56,7 @@
   font-size: 10px;
   line-height: normal;
   color: var(--electric-pink);
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .register__button {
@@ -102,7 +102,7 @@
   .register {
     min-width: 260px;
     width: calc(100% - 60px);
-    margin: 56 auto 0;
+    margin: 56px auto 0;
     padding-bottom: 30px;
   }
   .register__header {
