@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './Profile.css';
-import Header from '../Header/Header';
 
-const Profile = ({ isAuthorized, signOut }) => {
+const Profile = ({ signOut }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [isEdit, setIsEdit] = useState(false);
@@ -51,67 +50,68 @@ const Profile = ({ isAuthorized, signOut }) => {
   };
 
   return (
-    <main className='main profile_main'>
-      <Header isAuthorized={isAuthorized} />
-      <div className="profile__container">
-        <h1 className="profile__title">Привет, {newName || 'Дана'}!</h1> {/* Updated title */}
-        <form className="profile__form" onSubmit={handleSubmit}>
-          <div className="profile__value">
-            <label className="profile__label">Имя</label>
-            <input
-              type="text"
-              name="name"
-              value={name}
-              onChange={handleInputChange}
-              className="profile__input"
-              required
-              placeholder="Дана"
-              readOnly={!isEdit}
-            />
-          </div>
-          <div className="profile__line"></div>
-          <div className="profile__value">
-            <label className="profile__label">E-mail</label>
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={handleInputChange}
-              className="profile__input"
-              required
-              placeholder="pochta@gmail.com"
-              readOnly={!isEdit}
-            />
-          </div>
-          <div className="profile__actions">
-            {isEdit ? (
+    <main className='main'>
+      <section className='profile'>
+        <div className="profile__container">
+          <h1 className="profile__title">Привет, {newName || 'Дана'}!</h1> {/* Updated title */}
+          <form className="profile__form" onSubmit={handleSubmit}>
+            <div className="profile__value">
+              <label className="profile__label">Имя</label>
+              <input
+                type="text"
+                name="name"
+                value={name}
+                onChange={handleInputChange}
+                className="profile__input"
+                required
+                placeholder="Дана"
+                readOnly={!isEdit}
+              />
+            </div>
+            <div className="profile__line"></div>
+            <div className="profile__value">
+              <label className="profile__label">E-mail</label>
+              <input
+                type="email"
+                name="email"
+                value={email}
+                onChange={handleInputChange}
+                className="profile__input"
+                required
+                placeholder="pochta@gmail.com"
+                readOnly={!isEdit}
+              />
+            </div>
+            <div className="profile__actions">
+              {isEdit ? (
+                <button
+                  type="submit"
+                  className={`profile__submit ${
+                    !isFormModified ? 'profile__submit_disabled' : ''
+                  }`}
+                  disabled={!isFormModified}
+                >
+                  Сохранить
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  className="profile__edit"
+                  onClick={handleEditClick}
+                >
+                  Редактировать
+                </button>
+              )}
               <button
-                type="submit"
-                className={`profile__submit ${
-                  !isFormModified ? 'profile__submit_disabled' : ''
-                }`}
-                disabled={!isFormModified}
-              >
-                Сохранить
+              type="button"
+              className="profile__logout"
+              onClick={signOut}>
+                Выйти из аккаунта
               </button>
-            ) : (
-              <button
-                type="button"
-                className="profile__edit"
-                onClick={handleEditClick}
-              >
-                Редактировать
-              </button>
-            )}
-            <button
-            type="button"
-            className="profile__logout"
-            onClick={signOut}>
-              Выйти из аккаунта
-            </button>
-          </div>
-        </form>
-      </div>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
   );
 };

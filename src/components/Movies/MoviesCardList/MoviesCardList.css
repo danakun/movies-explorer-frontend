@@ -29,7 +29,7 @@
   transition: 0.4s;
 }
 
-.cards__button_hidden {
+.cards__button-hidden_ {
   display: none;
 }
 
@@ -58,5 +58,9 @@
   }
   .cards {
     width: calc(100% - 10px*2)
+  }
+  .cards__button {
+    width: 240px;
+    padding: 9px 20px;
   }
 }

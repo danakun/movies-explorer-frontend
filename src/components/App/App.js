@@ -13,6 +13,8 @@ import Register from '../Register/Register';
 import Login from '../Login/Login';
 import NotFound from '../NotFound/NotFound';
 import InfoToolTip from '../InfoToolTip/InfoToolTip';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 function App() {
   const navigate = useNavigate();
@@ -42,25 +44,57 @@ const isInfoToolTipPopupOpen = false;
     <Routes>
     <Route
       path="/"
-      element={<Main authorized={isAuthorized} />}
+      element={
+        <>
+        <Header
+          authorized={isAuthorized}
+        />
+        <Main authorized={isAuthorized} />
+        <Footer />
+      </>
+      }
     />
 
     <Route
       path="/profile"
-      element={<Profile
+      element={
+        <>
+        <Header
+          authorized={isAuthorized}
+        />
+        <Profile
         authorized={isAuthorized}
         signOut={signOut}
-         />}
+         />
+        <Footer />
+      </>
+      }
     />
 
     <Route
       path="/movies"
-      element={<Movies authorized={isAuthorized} />} // authorized={isAuthtorized}
+      element={
+        <>
+        <Header
+          authorized={isAuthorized}
+        />
+        <Movies authorized={isAuthorized} />
+        <Footer />
+      </>
+      }
     />
 
     <Route
       path="/saved-movies"
-      element={<SavedMovies authorized={isAuthorized} />}
+      element={
+        <>
+        <Header
+          authorized={isAuthorized}
+        />
+        <SavedMovies authorized={isAuthorized} />
+        <Footer />
+      </>
+      }
     />
 
     <Route

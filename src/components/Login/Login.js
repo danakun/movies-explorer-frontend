@@ -9,7 +9,7 @@ const Login = () => {
   const { enteredValues, errors, handleChange } = useForm();
   return (
     <main className='main main-login'>
-      <div className="login">
+      <section className="login">
         <div className="login__header">
           <Link to="/">
             <img className="login__logo" alt="Логотип дипломного проекта" src={logo} />
@@ -55,7 +55,7 @@ const Login = () => {
             Регистрация
           </Link>
         </div>
-      </div>
+      </section>
     </main>
   );
 };

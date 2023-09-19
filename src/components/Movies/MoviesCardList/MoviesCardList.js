@@ -25,7 +25,7 @@ const MoviesCardList = ({ isLoading = false, isSavedMoviesPage, movies }) => {
       <button
         type="button"
         className={
-          !isSavedMoviesPage ? 'cards__button' : 'cards__button_hidden'
+          !isSavedMoviesPage ? 'cards__button' : 'cards__button-hidden'
         }
       >
         Ещё
