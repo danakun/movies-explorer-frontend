@@ -1,4 +1,6 @@
 .filter__checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   margin-right: 12px;
   margin-left: 29px;
   width: 34px;
@@ -56,9 +58,6 @@
   padding-right: 30px;
 }
 
-
-
-
 @media screen and (max-width: 1040px) {
   .filter {
     margin-left: 18px;
@@ -78,7 +77,6 @@
     padding-left: 15px;
   }
 }
-
 
 @media screen and (max-width: 700px) {
   .filter {

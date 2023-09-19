@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types'; // Import PropTypes
 import iconError from '../../images/iconError.svg';
 import iconSuccess from '../../images/iconSuccess.svg';
-import './InfoTooltip.css';
+import './InfoToolTip.css';
 
-function InfoTooltip({ isOpen, onClose, isSuccessful, onOverlayClick }) {
+function InfoToolTip({ isOpen, onClose, isSuccessful, onOverlayClick }) {
   const message = `${
     isSuccessful
       ? 'Вы успешно зарегистрировались!'
@@ -37,11 +37,11 @@ function InfoTooltip({ isOpen, onClose, isSuccessful, onOverlayClick }) {
 }
 
 // Add PropTypes validations
-InfoTooltip.propTypes = {
+InfoToolTip.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
   isSuccessful: PropTypes.bool.isRequired,
   onOverlayClick: PropTypes.func.isRequired,
 };
 
-export default InfoTooltip;
+export default InfoToolTip;

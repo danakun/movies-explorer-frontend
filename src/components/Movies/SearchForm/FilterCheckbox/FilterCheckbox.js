@@ -1,6 +1,6 @@
+import React from 'react';
 import './FilterCheckbox.css';
 
-import React from 'react';
 const FilterCheckbox = () => {
   return (
     <section className="filter">

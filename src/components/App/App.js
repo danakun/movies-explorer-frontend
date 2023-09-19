@@ -12,16 +12,16 @@ import SavedMovies from '../SavedMovies/SavedMovies';
 import Register from '../Register/Register';
 import Login from '../Login/Login';
 import NotFound from '../NotFound/NotFound';
-import InfoTooltip from '../InfoToolTip/InfoToolTip';
+import InfoToolTip from '../InfoToolTip/InfoToolTip';
 
 function App() {
   const navigate = useNavigate();
   //const [isAuthorized, setIsAuthorized] = useState(false);
   // const [isAuthorized, setisAuthorized] = useState(true);
   const isAuthorized = false;
-const isInfoTooltipPopupOpen = false;
+const isInfoToolTipPopupOpen = false;
   // const closeAllPopups = () => {
-  //   setInfoTooltipPopupOpen(false);
+  //   setInfoToolTipPopupOpen(false);
   //   setIsMenuOpen(false);
   // }
 
@@ -79,8 +79,8 @@ const isInfoTooltipPopupOpen = false;
     />
   </Routes>
 
-  <InfoTooltip
-          isOpen={isInfoTooltipPopupOpen}
+  <InfoToolTip
+          isOpen={isInfoToolTipPopupOpen}
         // onClose={closeAllPopups}
         //   tooltipSettings={tooltipSettings}
         //   onOverlayClick={handleOverlayClick}
