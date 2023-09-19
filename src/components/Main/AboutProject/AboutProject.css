@@ -1,0 +1,151 @@
+.project-info {
+  padding-top: 110px;
+  width: calc(100% - 50px*2);
+}
+
+.project-info__title {
+  letter-spacing: -0.88px;
+}
+
+.project-info__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  padding-top: 70px;
+  padding-bottom: 90px;
+  column-gap: 40px;
+}
+
+.project-info__element {
+  text-align: left;
+}
+
+.project-info__header {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.8px;
+  margin: 0;
+  padding-bottom: 26px;
+}
+
+.project-info-bar {
+  display: grid;
+  grid-template-columns: 228px 1fr;
+  padding: 20px 0 110px;
+  font-size: 14px;
+}
+
+.project-info__backend {
+background-color: var(--charcoal-black);
+color: var(--pristine-white);
+padding: 9px 14px;
+}
+
+
+.project-info__frontend {
+  background-color: var(--light-silver);
+  padding: 9px 14px;
+}
+
+.project-info__text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  color: var(--slate-gray);
+  padding-top: 14px;
+}
+
+@media screen and (max-width: 1040px) {
+  .project-info__grid {
+    column-gap: 30px;
+    padding-bottom: 73px;
+  }
+
+  .project-info {
+    padding-top: 90px;
+  }
+
+  .project-info__header {
+     padding-bottom: 22px;
+  }
+
+  .project-info-bar {
+    grid-template-columns: 140px 1fr;
+    padding: 20px 0 90px;
+    font-size: 14px;
+  }
+
+  .project-info__title {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.88px;
+  }
+
+  .project-info__copy {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .project-info {
+    padding-top: 70px;
+    width: calc(100% - 18px*2);
+  }
+
+  .project-info__grid {
+    grid-template-columns: 1fr;
+    gap: 56px;
+    padding-bottom: 40px;
+    padding-top: 60px;
+  }
+
+  .project-info__header {
+    padding-bottom: 16px;
+    font-size: 18px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.72px;
+ }
+
+ .project-info-bar {
+  grid-template-columns: 100px 1fr;
+  padding: 16px 0 70px;
+  font-size: 14px;
+}
+.project-info__title {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.72px;
+  }
+  .project-info__text {
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    padding-top: 5px;
+  }
+  .project-info__backend  {
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 11px 14px;
+  }
+   .project-info__frontend {
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 11px 14px;
+  }
+}
