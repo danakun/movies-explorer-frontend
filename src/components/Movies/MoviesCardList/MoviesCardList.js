@@ -2,9 +2,21 @@ import React from 'react';
 import './MoviesCardList.css';
 import Preloader from '../Preloader/Preloader';
 import MoviesCard from '../MoviesCard/MoviesCard';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const MoviesCardList = ({ isLoading = false, isSavedMoviesPage, movies }) => {
+const MoviesCardList = ({ isLoading = false, isSavedMoviesPage, movies, hasMore }) => {
+  const [moviesLength, setMoviesLength] = useState(0);
+  const [isMoreButton, setIsMoreButton] = useState(false);
+  const { savedMovies } = useContext(CurrentUserContext);
+
+  const loadMoreMovies = () => {
+    if (window.innerWidth > 1041) setMoviesLength(moviesLength + 3);
+    else {
+      setMoviesLength(moviesLength + 2);
+    }
+  };
+
   return (
     <section className="cards limits-container">
       {isLoading ? (
@@ -22,14 +34,18 @@ const MoviesCardList = ({ isLoading = false, isSavedMoviesPage, movies }) => {
           })}
         </ul>
       )}
+       {isMoreButton ?
       <button
         type="button"
-        className={
+        className=  //добавила новый класс more 'cards__button cards__button-more'
+        {
           !isSavedMoviesPage ? 'cards__button' : 'cards__button-hidden'
         }
+        onClick={loadMoreMovies}
       >
         Ещё
       </button>
+      : ''}
     </section>
   );
 };
@@ -49,3 +65,8 @@ MoviesCardList.propTypes = {
 };
 
 export default MoviesCardList;
+
+// if moviesLength is smaller than movie api list length than show hasMore!!!
+// (define how hasMore works) const [hasMore, setHasMore] = useState(apiFilms.hasMore());
+// if hasMore - show button(setIsMoreButton -true)
+//  if button is shown(isMoreButton) - onClick- loadMoreMovies

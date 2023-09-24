@@ -3,10 +3,20 @@ import { Link } from 'react-router-dom';
 import logo from '../../images/logo.svg';
 import './Login.css';
 import useForm from '../../utils/useForm';
+import PropTypes from 'prop-types';
 
 
-const Login = () => {
-  const { enteredValues, errors, handleChange } = useForm();
+const Login = ({ handleLogin, isLoading }) => {
+  const { enteredValues, errors, handleChange, isFormValid } = useForm();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (!enteredValues.email || !enteredValues.password) {
+      return;
+    }
+    handleLogin(enteredValues);
+  };
+
   return (
     <main className='main main-login'>
       <section className="login">
@@ -16,7 +26,7 @@ const Login = () => {
           </Link>
           <h1 className="login__title">Рады видеть!</h1>
         </div>
-        <form className="login__form">
+        <form className="login__form" onSubmit={handleSubmit}>
           <label className="login__label" htmlFor="email">
             E-mail
           </label>
@@ -29,6 +39,7 @@ const Login = () => {
             value={enteredValues.email || ''}
             onChange={handleChange}
             placeholder="pochta@yandex.ru"
+            disabled={isLoading}
           />
           <span className="login__error">{errors.email}</span>
           <label className="login__label" htmlFor="password">
@@ -43,10 +54,11 @@ const Login = () => {
             value={enteredValues.password || ''}
             onChange={handleChange}
             placeholder="Пароль"
+            disabled={isLoading}
           />
           <span className="login__error">{errors.password}</span>
-          <button type="submit" className="login__button">
-            Войти
+          <button type="submit" className="login__button"  disabled={!isFormValid}>
+          {isLoading ? 'Вход...' : 'Войти'}
           </button>
         </form>
         <div className="login__register">
@@ -58,6 +70,11 @@ const Login = () => {
       </section>
     </main>
   );
+};
+
+Login.propTypes = {
+  handleLogin: PropTypes.func.isRequired,
+  isLoading: PropTypes.bool.isRequired,
 };
 
 export default Login;
